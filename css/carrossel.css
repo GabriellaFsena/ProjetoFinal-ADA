@@ -1,0 +1,110 @@
+/* Estilização para o contêiner do carrossel */
+.carousel {
+    position: relative; /* Define o contêiner como uma posição relativa */
+}
+
+/* Estilização para os slides do carrossel (imagens) */
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilização para as bolinhas do carrossel */
+.slick-dots {
+    list-style: none;
+    text-align: center;
+    position: a; /* Define a posição absoluta para as bolinhas */
+    bottom: 10px; /* Ajusta a posição verticalmente (por exemplo, 10px do fundo) */
+    left: 0; /* Ajusta a posição horizontalmente (para a esquerda) */
+    right: 0; /* Ajusta a posição horizontalmente (para a direita) */
+}
+
+.slick-dots li {
+    display: inline;
+    margin: 0 5px; /* Espaçamento entre as bolinhas */
+}
+
+.slick-dots li button {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #333;
+    background: transparent;
+    border-radius: 50%;
+}
+
+.slick-dots li.slick-active button {
+    background: #ff6600; /* Cor de fundo do indicador ativo */
+}
+
+/* Estilização para o botão "next" (seta) */
+.slick-next::before {
+    content: '\2192'; /* Código Unicode para uma seta direita */
+    font-size: 24px; /* Tamanho da fonte da seta */
+    color: #333; /* Cor da seta */
+    position: absolute; /* Define a posição absoluta para a seta */
+    top: 0; /* Posiciona a seta verticalmente no meio do contêiner */
+    right: -20px; /* Posiciona a seta à direita do contêiner */
+    z-index: 1; /* Garante que a seta fique entre as imagens e as bolinhas */
+}
+
+.slick-dots li {
+    display: inline;
+    margin: 0 5px; /* Espaçamento entre as bolinhas */
+}
+
+.slick-dots li button {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #333;
+    background: transparent;
+    border-radius: 50%;
+}
+
+.slick-dots li.slick-active button {
+    background: #ff6600; /* Cor de fundo do indicador ativo */
+}
+
+/* Estilização para o botão "next" (seta) */
+.slick-next::before {
+    content: '\2192'; /* Código Unicode para uma seta direita */
+    font-size: 24px; /* Tamanho da fonte da seta */
+    color: #333; /* Cor da seta */
+    position: absolute; /* Define a posição absoluta para a seta */
+    top: 50%; /* Posiciona a seta verticalmente no meio do contêiner */
+    right: 20px; /* Posiciona a seta à direita do contêiner */
+    z-index: 1; /* Garante que a seta fique abaixo das bolinhas */
+}
+
+
+
+/* Estilização para os indicadores (pontos) do carrossel */
+.slick-dots {
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    display: inline;
+}
+
+.slick-dots li button {
+    font-size: 12px; /* Tamanho da fonte dos pontos */
+    background: #c21919; /* Cor de fundo dos pontos */
+    border: 2px solid #333; /* Borda dos pontos */
+    border-radius: 50%; /* Tornar os pontos circulares */
+    width: 12px; /* Largura dos pontos */
+    height: 12px; /* Altura dos pontos */
+    margin: 0 5px; /* Espaçamento entre os pontos */
+}
+
+/* Estilização para o ponto ativo (o ponto da imagem atual) */
+.slick-dots li.slick-active button {
+    background: #ff6600; /* Cor de fundo do ponto ativo */
+}
+
+/* Remova o texto "next" */
+.slick-next {
+     /* Ou use "display: none;" se a seta ainda estiver aparecendo */
+    display: none;
+}
+
