@@ -1,27 +1,27 @@
-/* Estilização para o contêiner do carrossel */
+
 .carousel {
-    position: relative; /* Define o contêiner como uma posição relativa */
+    position: relative; 
 }
 
-/* Estilização para os slides do carrossel (imagens) */
+
 .carousel img {
     width: 100%;
     height: auto;
 }
 
-/* Estilização para as bolinhas do carrossel */
+
 .slick-dots {
     list-style: none;
     text-align: center;
-    position: a; /* Define a posição absoluta para as bolinhas */
-    bottom: 10px; /* Ajusta a posição verticalmente (por exemplo, 10px do fundo) */
-    left: 0; /* Ajusta a posição horizontalmente (para a esquerda) */
-    right: 0; /* Ajusta a posição horizontalmente (para a direita) */
+    position: a; 
+    bottom: 10px; 
+    left: 0; 
+    right: 0; 
 }
 
 .slick-dots li {
     display: inline;
-    margin: 0 5px; /* Espaçamento entre as bolinhas */
+    margin: 0 5px; 
 }
 
 .slick-dots li button {
@@ -33,23 +33,23 @@
 }
 
 .slick-dots li.slick-active button {
-    background: #ff6600; /* Cor de fundo do indicador ativo */
+    background: #ff6600; 
 }
 
-/* Estilização para o botão "next" (seta) */
+
 .slick-next::before {
-    content: '\2192'; /* Código Unicode para uma seta direita */
-    font-size: 24px; /* Tamanho da fonte da seta */
-    color: #333; /* Cor da seta */
-    position: absolute; /* Define a posição absoluta para a seta */
-    top: 0; /* Posiciona a seta verticalmente no meio do contêiner */
-    right: -20px; /* Posiciona a seta à direita do contêiner */
-    z-index: 1; /* Garante que a seta fique entre as imagens e as bolinhas */
+    content: '\2192'; 
+    font-size: 24px; 
+    color: #333; 
+    position: absolute; 
+    top: 0; 
+    right: -20px; 
+    z-index: 1; 
 }
 
 .slick-dots li {
     display: inline;
-    margin: 0 5px; /* Espaçamento entre as bolinhas */
+    margin: 0 5px; 
 }
 
 .slick-dots li button {
@@ -61,23 +61,23 @@
 }
 
 .slick-dots li.slick-active button {
-    background: #ff6600; /* Cor de fundo do indicador ativo */
+    background: #ff6600; 
 }
 
-/* Estilização para o botão "next" (seta) */
+
 .slick-next::before {
-    content: '\2192'; /* Código Unicode para uma seta direita */
-    font-size: 24px; /* Tamanho da fonte da seta */
-    color: #333; /* Cor da seta */
-    position: absolute; /* Define a posição absoluta para a seta */
-    top: 50%; /* Posiciona a seta verticalmente no meio do contêiner */
-    right: 20px; /* Posiciona a seta à direita do contêiner */
-    z-index: 1; /* Garante que a seta fique abaixo das bolinhas */
+    content: '\2192';
+    font-size: 24px; 
+    color: #333; 
+    position: absolute; 
+    top: 50%; 
+    right: 20px; 
+    z-index: 1; 
 }
 
 
 
-/* Estilização para os indicadores (pontos) do carrossel */
+
 .slick-dots {
     list-style: none;
     text-align: center;
@@ -88,23 +88,64 @@
 }
 
 .slick-dots li button {
-    font-size: 12px; /* Tamanho da fonte dos pontos */
-    background: #c21919; /* Cor de fundo dos pontos */
-    border: 2px solid #333; /* Borda dos pontos */
-    border-radius: 50%; /* Tornar os pontos circulares */
-    width: 12px; /* Largura dos pontos */
-    height: 12px; /* Altura dos pontos */
-    margin: 0 5px; /* Espaçamento entre os pontos */
+    font-size: 12px; 
+    background: #c21919; 
+    border: 2px solid #333;
+    border-radius: 50%; 
+    width: 12px; 
+    height: 12px;
+    margin: 0 5px; 
 }
 
-/* Estilização para o ponto ativo (o ponto da imagem atual) */
+
 .slick-dots li.slick-active button {
-    background: #ff6600; /* Cor de fundo do ponto ativo */
+    background: #ff6600; 
 }
 
-/* Remova o texto "next" */
+
 .slick-next {
-     /* Ou use "display: none;" se a seta ainda estiver aparecendo */
     display: none;
 }
 
+@media screen and (max-width: 329px) {
+    .menu {
+        display: none; /* Oculta a lista em telas menores */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Altura do menu */
+        left: 0;
+        background-color: #333;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block; /* Exibe o ícone do menu em telas menores */
+        cursor: pointer;
+    }
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #cd0303;
+        margin: 3px 5px;
+        transition: 0.4s;
+    }
+
+    /* Estilos para o ícone do menu aberto */
+    .change .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .change .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .change .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+  .logo img {
+width: 30px; 
+margin-top: 5px;
+margin-left: 20px;
+}
+}

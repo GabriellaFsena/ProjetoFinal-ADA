@@ -1,15 +1,25 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    
 }
 
 header {
-    background-color: #eeebe3; 
-    color: #000000; 
+    background-color: #ffffff; 
+    color: #696767; 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    font-size: 15px;
+
 
 }
 
@@ -24,9 +34,15 @@ ul, li {
     padding: 0;
 }
 
+
+.menu-icon {
+    display: none; /* Oculta o ícone do menu em telas maiores */
+}
+
 .menu {
     flex: 1; 
     text-align: center; 
+ 
 }
 
 .menu ul {
@@ -41,15 +57,13 @@ ul, li {
 
 .menu a {
     text-decoration: none;
-    color: #000000; 
+    color:#cd0303; 
 }
 
 .header-nav-list {
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+   
     font-weight: 700;
-    display: flex;
+   
 }
 
 .header-icons {
@@ -64,10 +78,13 @@ ul, li {
     margin-top: -25px;
 }
 .container-2 {
-    background-image: url("../img/red.jpg");
+    
+    background-color: #ffffff;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
     }
     
     .item-list {
@@ -78,26 +95,71 @@ ul, li {
     }
     
     .item {
-        width: 20%; /* Defina a largura desejada para os itens */
+        width: 20%; 
         height: 20%;
-        margin: 15px;
+        margin: 10px;
         padding: 25px;
         border: 1px solid #ccc;
         text-align: center;
-        border-radius: 10px; /* Bordas arredondadas */
+        border-radius: 10px; 
         background-color: #ffff;
         font-size: 15px;
     }
     
     .item img {
-        max-width: 90%;
+        width: 50px; 
+        height: 50px; 
     }
+    
     
     .img-promo {
        display: flex;
        flex-direction: column;
-       margin-right: 30px;
+       margin-right: 3px;
        width: 50%;
        height: 50%;
     }
     
+    @media screen and (max-width: 329px) {
+        .menu {
+            display: none; /* Oculta a lista em telas menores */
+            flex-direction: column;
+            position: absolute;
+            top: 60px; /* Altura do menu */
+            left: 0;
+            background-color: #333;
+            width: 100%;
+        }
+    
+        .menu-icon {
+            display: block; /* Exibe o ícone do menu em telas menores */
+            cursor: pointer;
+        }
+        .bar {
+            width: 90px;
+            height: 30px;
+            background-color: #cd0303;
+            margin: 4px 0;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+    
+        /* Estilos para o ícone do menu aberto */
+        .change .bar:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+    
+        .change .bar:nth-child(2) {
+            opacity: 0;
+        }
+    
+        .change .bar:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+      .logo img {
+    width: 20px; 
+    margin-top: 5px;
+    margin-left: 10px;
+}
+    }
