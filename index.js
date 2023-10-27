@@ -9,8 +9,17 @@ $(document).ready(function () {
 });
 
 
-// Adicione um evento de clique para alternar a exibição da lista no ícone do menu
 document.querySelector('.menu-icon').addEventListener('click', function () {
     var menuList = document.querySelector('.menu-list');
     menuList.classList.toggle('change');
+});
+
+document.getElementById('.form').addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    
+    alert("Feedback enviado com sucesso!");
+    
+  
+    this.reset();
 });

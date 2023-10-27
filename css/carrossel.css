@@ -109,10 +109,10 @@
 
 @media screen and (max-width: 329px) {
     .menu {
-        display: none; /* Oculta a lista em telas menores */
+        display: none; 
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Altura do menu */
+        top: 60px; 
         left: 0;
         background-color: #333;
         width: 100%;

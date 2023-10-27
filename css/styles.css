@@ -1,4 +1,9 @@
-body {
+:root {
+    --cor-primaria: #fff;
+    --cor-required: #a4043c;
+    --cor-botao: #bf2e0d; 
+    --cor-botao-active: #000000; 
+}body {
     font-family: 'Bebas Neue', sans-serif;
     margin: 0;
     padding: 0;
@@ -120,31 +125,101 @@ ul, li {
        height: 50%;
     }
     
-    @media screen and (max-width: 329px) {
+    
+
+    .container-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Merriweather Sans', sans-serif;
+    }
+    .titulo-form {
+        font-size: 20px;
+        text-align: center;
+    }
+    legend {
+        font-weight: 900;
+    }
+    
+    .formato-tel {
+        font-size: 12px;
+    }
+    .required {
+        color: var(--cor-required);
+        font-weight: 500;
+    }
+    
+    .botao-enviar, .botao-limpar {
+        background-color: var(--cor-botao);
+        color: var(--cor-primaria);
+        cursor: pointer;
+        padding: 10px 20px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+    
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.input-caixa,
+
+textarea {
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
+}
+
+
+
+
+    
+    .botao-enviar:hover {
+    background-color: var(--cor-botao-active);
+    }
+    
+    
+    .botao-limpar:hover {
+        background-color: var(--cor-botao-active);
+    }
+    
+    
+   
+    @media screen and (max-width: 768px) {
         .menu {
-            display: none; /* Oculta a lista em telas menores */
+            display: none;
             flex-direction: column;
             position: absolute;
-            top: 60px; /* Altura do menu */
+            top: 60px;
             left: 0;
             background-color: #333;
             width: 100%;
         }
     
         .menu-icon {
-            display: block; /* Exibe o ícone do menu em telas menores */
+            display: block; 
             cursor: pointer;
         }
         .bar {
-            width: 90px;
-            height: 30px;
+            width: 90%;
+            height: 30%;
             background-color: #cd0303;
             margin: 4px 0;
             transition: 0.4s;
             cursor: pointer;
         }
     
-        /* Estilos para o ícone do menu aberto */
+
         .change .bar:nth-child(1) {
             transform: rotate(-45deg) translate(-5px, 6px);
         }
@@ -161,5 +236,9 @@ ul, li {
     width: 20px; 
     margin-top: 5px;
     margin-left: 10px;
+}
+.titulo-form {
+    font-size: 10px;
+    text-align: center;
 }
     }
